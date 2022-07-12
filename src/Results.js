@@ -1,8 +1,8 @@
 import React from "react";
 import Meaning from "./Meaning.js";
+import Phonetics from "./Phonetics.js";
 
 export default function Results(props) {
-  console.log(props.results.phonetics);
   if (props.results) {
     return (
       <div className="Results">
@@ -11,14 +11,11 @@ export default function Results(props) {
           if (phonetic.audio) {
             return (
               <div key={index}>
-                <a href={phonetic.audio} target="_blank">
-                  Listen
-                </a>{" "}
-                {phonetic.text}{" "}
+                <Phonetics phonetic={phonetic} />
               </div>
             );
           } else {
-            return null;
+            return <div className="phonetic-text">{phonetic.text}</div>;
           }
         })}
 
