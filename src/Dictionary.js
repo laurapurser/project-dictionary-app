@@ -36,15 +36,22 @@ if (loaded) {
 
 
   return (
+    
     <div className="Dictionary">
+    <section>
       <form onSubmit={handleSearch}>
         <input
           type="search"
           placeholder="Enter a word"
           onChange={handleKeywordChange}
         />
-        <input type="submit" value="Search" />
+        
       </form>
+      <div className="form-text">
+      Suggested words: sunset, yoga, plant...
+      </div>
+      </section>
+     
       <Results results={results} />
     </div>
   );

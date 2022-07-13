@@ -1,12 +1,14 @@
 import React from "react";
 import Meaning from "./Meaning.js";
 import Phonetics from "./Phonetics.js";
+import "./Results.css";
 
 export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <h3>{props.results.word}</h3>
+      <section>
+        <h3 className="title">{props.results.word}</h3>
         {props.results.phonetics.map(function (phonetic, index) {
           if (phonetic.audio) {
             return (
@@ -18,7 +20,8 @@ export default function Results(props) {
             return null;
           }
         })}
-
+</section>
+        
         {props.results.meanings.map(function (meanings, index) {
           return (
             <div key={index}>
@@ -26,9 +29,10 @@ export default function Results(props) {
             </div>
           );
         })}
-      </div>
+      </div> 
     );
   } else {
     return null;
   }
+ 
 }

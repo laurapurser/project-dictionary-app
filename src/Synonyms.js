@@ -9,9 +9,9 @@ export default function Synonyms(props) {
           return (
             <ul className="synonym-list">
               <li key={index}>
-                <em>
-                  <strong> {synonyms} </strong>
-                </em>
+                
+                   {synonyms} 
+               
               </li>
             </ul>
           );

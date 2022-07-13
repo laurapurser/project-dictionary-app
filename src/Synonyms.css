@@ -1,3 +1,6 @@
 .Synonyms .synonym-list {
   list-style-type: none;
+  display: inline-block;
+  font-style: none;
+  font-weight: bold;
 }
