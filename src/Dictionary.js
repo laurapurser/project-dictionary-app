@@ -27,8 +27,11 @@ export default function Dictionary(props) {
       "563492ad6f91700001000001df70efdd6ab646dcaf352e518c957238";
 
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
-    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
-    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+    axios
+      .get(pexelsApiUrl, {
+        headers: { Authorization: `Bearer ${pexelsApiKey}` },
+      })
+      .then(handlePexelsResponse);
   }
 
   //[0].meanings[0].definitions[0].definition
