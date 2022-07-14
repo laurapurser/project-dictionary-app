@@ -7,21 +7,21 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-      <section>
-        <h3 className="title">{props.results.word}</h3>
-        {props.results.phonetics.map(function (phonetic, index) {
-          if (phonetic.audio) {
-            return (
-              <div key={index}>
-                <Phonetics phonetic={phonetic} />
-              </div>
-            );
-          } else {
-            return null;
-          }
-        })}
-</section>
-        
+        <section>
+          <h3 className="title">{props.results.word}</h3>
+          {props.results.phonetics.map(function (phonetic, index) {
+            if (phonetic.audio) {
+              return (
+                <div key={index}>
+                  <Phonetics phonetic={phonetic} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </section>
+
         {props.results.meanings.map(function (meanings, index) {
           return (
             <div key={index}>
@@ -29,10 +29,9 @@ export default function Results(props) {
             </div>
           );
         })}
-      </div> 
+      </div>
     );
   } else {
     return null;
   }
- 
 }
