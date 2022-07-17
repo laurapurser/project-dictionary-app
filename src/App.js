@@ -13,6 +13,7 @@ function App() {
           <a
             href="https://objective-einstein-d849c5.netlify.app"
             target="_blank"
+            rel="noreferrer"
           >
             Laura Purser
           </a>{" "}
@@ -20,11 +21,16 @@ function App() {
           <a
             href="https://github.com/laurapurser/project-dictionary-app"
             target="_blank"
+            rel="noreferrer"
           >
             open-sourced on Github
           </a>{" "}
           and{" "}
-          <a href="https://timely-cuchufli-86fe4b.netlify.app/" target="_blank">
+          <a
+            href="https://timely-cuchufli-86fe4b.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             hosted on Netlify
           </a>
         </footer>
