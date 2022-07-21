@@ -16,9 +16,12 @@ export default function Photos(props) {
                     alt="Visual relating to searched word"
                   />
                 </a>
+                
               </div>
+              
             );
           })}
+          <footer>Photos provided by <a href="https://www.pexels.com" target="_blank" rel="noreferrer" class="pixels-link" >Pexels</a></footer>
         </div>
       </section>
     );
